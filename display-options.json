@@ -1,0 +1,834 @@
+[
+	{
+		"id": "thumb_size",
+		"class": "main_options input",
+		"available": true,
+		"value": {
+			"w": "*",
+			"h": "*"
+		},
+		"allowed": [
+			"0-9",
+			"*"
+		],
+		"segments": [
+			{
+				"text": "__Thumbnail__ size:"
+			},
+			{
+				"type": "input",
+				"reference": "w",
+				"min": 1,
+				"max": 2048
+			},
+			{
+				"text": "x"
+			},
+			{
+				"type": "input",
+				"reference": "h",
+				"min": 1,
+				"max": 2048
+			},
+			{
+				"xtxt": "px _(default: 200×134)_"
+			}
+		]
+	},
+	{
+		"id": "image_width",
+		"class": "main_options input",
+		"available": true,
+		"value": "905",
+		"allowed": "0-9",
+		"segments": [
+			{
+				"text": "Default __image__ width:"
+			},
+			{
+				"type": "input",
+				"min": 1,
+				"max": 4096
+			},
+			{
+				"text": "px _→_ <a href='http://support.cargocollective.com/customer/portal/articles/708664-image-formatting-guide' target='_blank'>formatting guide</a>"
+			}
+		]
+	},
+	{
+		"id": "lightbox_view",
+		"class": "main_options check",
+		"available": true,
+		"value": true,
+		"segments": [
+			{
+				"type": "boolean"
+			},
+			{
+				"type": "label",
+				"text": "Enable __Lightbox__ view for images"
+			}
+		]
+	},
+	{
+		"id": "index_link_in_project",
+		"class": "main_options check",
+		"available": false,
+		"value": true,
+		"segments": [
+			{
+				"type": "boolean"
+			},
+			{
+				"type": "label",
+				"text": "__Index__ links"
+			}
+		]
+	},
+	{
+		"id": "next_link_in_project",
+		"class": "main_options check",
+		"available": false,
+		"value": true,
+		"segments": [
+			{
+				"type": "boolean"
+			},
+			{
+				"type": "label",
+				"text": "__Next project__ link"
+			}
+		]
+	},
+	{
+		"id": "title_in_thumb",
+		"class": "main_options check",
+		"available": true,
+		"value": true,
+		"segments": [
+			{
+				"type": "boolean"
+			},
+			{
+				"type": "label",
+				"text": "Show __Title__ below the thumbnails"
+			}
+		]
+	},
+	{
+		"id": "excerpt_in_thumb",
+		"class": "main_options check",
+		"available": false,
+		"value": false,
+		"segments": [
+			{
+				"type": "boolean"
+			},
+			{
+				"type": "label",
+				"text": "Text __excerpts__ below thumbnails"
+			}
+		]
+	},
+	{
+		"id": "tags_in_thumb",
+		"class": "main_options check",
+		"available": true,
+		"value": true,
+		"segments": [
+			{
+				"type": "boolean"
+			},
+			{
+				"type": "label",
+				"text": "Show __Tags__ below the thumbnails"
+			}
+		]
+	},
+	{
+		"id": "view_count_in_project",
+		"class": "main_options check",
+		"available": true,
+		"value": false,
+		"segments": [
+			{
+				"type": "boolean"
+			},
+			{
+				"type": "label",
+				"text": "Show __Views__ counter (in the footer)"
+			}
+		]
+	},
+	{
+		"id": "title_in_project",
+		"class": "main_options check",
+		"available": true,
+		"value": true,
+		"segments": [
+			{
+				"type": "boolean"
+			},
+			{
+				"type": "label",
+				"text": "Show __Project Title__ in Projects and Pages"
+			}
+		]
+	},
+	{
+		"id": "footer_in_project",
+		"class": "main_options check",
+		"available": false,
+		"value": false,
+		"segments": [
+			{
+				"type": "boolean"
+			},
+			{
+				"type": "label",
+				"text": "__Footer__ in Projects and Pages"
+			}
+		]
+	},
+	{
+		"id": "thumbs_below_projects",
+		"class": "main_options check",
+		"available": false,
+		"value": false,
+		"segments": [
+			{
+				"type": "boolean"
+			},
+			{
+				"type": "label",
+				"text": "Show __Thumbnails__ below Projects"
+			}
+		]
+	},
+	{
+		"id": "thumbs_below_pages",
+		"class": "main_options check",
+		"available": false,
+		"value": false,
+		"segments": [
+			{
+				"type": "boolean"
+			},
+			{
+				"type": "label",
+				"text": "Show __Thumbnails__ below Pages"
+			}
+		]
+	},
+	{
+		"id": "projects_in_text_nav",
+		"class": "main_options check",
+		"available": false,
+		"value": false,
+		"segments": [
+			{
+				"type": "boolean"
+			},
+			{
+				"type": "label",
+				"text": "Text nav: __Projects__"
+			}
+		]
+	},
+	{
+		"id": "pages_in_text_nav",
+		"class": "main_options check",
+		"available": false,
+		"value": true,
+		"segments": [
+			{
+				"type": "boolean"
+			},
+			{
+				"type": "label",
+				"text": "Text nav: __Pages__"
+			}
+		]
+	},
+	{
+		"id": "pages_do_not_paginate",
+		"class": "main_options check",
+		"available": false,
+		"value": false,
+		"segments": [
+			{
+				"type": "boolean"
+			},
+			{
+				"type": "label",
+				"text": "Text nav: Pages and Links do not __paginate__"
+			}
+		]
+	},
+	{
+		"id": "following_link_in_nav",
+		"class": "main_options check",
+		"available": true,
+		"value": false,
+		"segments": [
+			{
+				"type": "boolean"
+			},
+			{
+				"type": "label",
+				"text": "Show the __Following__ link"
+			}
+		]
+	},
+	{
+		"id": "set_options",
+		"class": "set_options text",
+		"available": true,
+		"value": true,
+		"segments": [
+			{
+				"id": "title",
+				"text": "__Using Sets__"
+			}
+		]
+	},
+	{
+		"id": "use_sets",
+		"class": "set_options check radio",
+		"available": false,
+		"value": {
+			"enabled": false,
+			"open_by_default": true,
+			"can_toggle": true,
+			"one_at_a_time": false
+		},
+		"segments": [
+			{
+				"type": "boolean",
+				"reference": "enabled"
+			},
+			{
+				"type": "label-preface",
+				"reference": "enabled",
+				"text": "*Use Sets in text menu and thumbnails*"
+			},
+			{
+				"text": "<br>"
+			},
+			{
+				"type": "boolean",
+				"depends_on": "enabled",
+				"reference": "open_by_default"
+			},
+			{
+				"type": "label",
+				"reference": "open_by_default",
+				"text": "Sets are open by default"
+			},
+			{
+				"text": "<br>"
+			},
+			{
+				"type": "boolean",
+				"depends_on": "enabled",
+				"reference": "can_toggle"
+			},
+			{
+				"type": "label",
+				"reference": "can_toggle",
+				"text": "Sets can be opened and closed"
+			},
+			{
+				"text": "<br>"
+			},
+			{
+				"type": "boolean",
+				"depends_on": "enabled",
+				"reference": "one_at_a_time"
+			},
+			{
+				"type": "label",
+				"reference": "one_at_a_time",
+				"text": "Opening a Set closes other Sets"
+			}
+		]
+	},
+	{
+		"id": "use_set_links",
+		"class": "set_options check radio",
+		"available": true,
+		"value": {
+			"enabled": false,
+			"position": "top"
+		},
+		"segments": [
+			{
+				"type": "boolean",
+				"reference": "enabled"
+			},
+			{
+				"type": "label-preface",
+				"reference": "enabled",
+				"text": "*Show Set links in the text menu*"
+			},
+			{
+				"text": "<br>"
+			},
+			{
+				"type": "radio",
+				"id": "top",
+				"depends_on": "enabled",
+				"reference": "position",
+				"value": "top"
+			},
+			{
+				"type": "label",
+				"input": "top",
+				"text": "First"
+			},
+			{
+				"type": "radio",
+				"id": "bottom",
+				"depends_on": "enabled",
+				"reference": "position",
+				"value": "bottom"
+			},
+			{
+				"type": "label",
+				"input": "bottom",
+				"text": "Last"
+			}
+		]
+	},
+	{
+		"id": "pagination_count",
+		"class": "main_options input",
+		"available": true,
+		"value": "20",
+		"allowed": "0-9",
+		"segments": [
+			{
+				"text": "__Pagination__ show"
+			},
+			{
+				"type": "input",
+				"min": 1,
+				"max": 1024
+			},
+			{
+				"text": "items per page."
+			}
+		]
+	},
+	{
+		"id": "slideshow_options",
+		"class": "slideshow_options text",
+		"available": true,
+		"value": true,
+		"segments": [
+			{
+				"text": "-------__Slideshow options__"
+			}
+		]
+	},
+	{
+		"id": "slideshow_responsive",
+		"class": "main_options check",
+		"available": false,
+		"value": true,
+		"segments": [
+			{
+				"type": "boolean"
+			},
+			{
+				"type": "label",
+				"text": "make the slideshow __Responsive__"
+			}
+		]
+	},
+	{
+		"id": "slide_transition",
+		"class": "slideshow_options select",
+		"available": true,
+		"value": "fade",
+		"segments": [
+			{
+				"type": "preface",
+				"text": "Transition:"
+			},
+			{
+				"type": "dropdown",
+				"options": [
+					{
+						"text": "None",
+						"value": "none",
+						"available": true
+					},
+					{
+						"text": "Fade",
+						"value": "fade",
+						"available": true
+					},
+					{
+						"text": "Scroll Left",
+						"value": "left-right",
+						"available": true
+					},
+					{
+						"text": "Scroll Right",
+						"value": "right-left",
+						"available": true
+					},
+					{
+						"text": "Scroll Up",
+						"value": "bottom-top",
+						"available": true
+					},
+					{
+						"text": "Scroll Down",
+						"value": "top-bottom",
+						"available": true
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "slide_transition_duration",
+		"class": "slideshow_options input",
+		"available": true,
+		"value": "0.4",
+		"allowed": "0-9.",
+		"segments": [
+			{
+				"type": "preface",
+				"reference": "enabled",
+				"text": "Transition duration:"
+			},
+			{
+				"type": "input",
+				"min": 0.1,
+				"max": 600,
+				"step": 0.1
+			},
+			{
+				"text": "seconds"
+			}
+		]
+	},
+	{
+		"id": "slide_auto_play",
+		"class": "slideshow_options check input",
+		"available": true,
+		"value": {
+			"enabled": false,
+			"delay": 2.5
+		},
+		"segments": [
+			{
+				"type": "boolean",
+				"reference": "enabled"
+			},
+			{
+				"type": "label-preface",
+				"reference": "enabled",
+				"text": "Auto-play"
+			},
+			{
+				"type": "input",
+				"depends_on": "enabled",
+				"reference": "delay",
+				"min": 0.1,
+				"max": 600,
+				"step": 0.1
+			},
+			{
+				"text": "seconds delay"
+			}
+		]
+	},
+	{
+		"id": "slide_text_nav",
+		"class": "slideshow_options check input",
+		"available": true,
+		"value": {
+			"enabled": true,
+			"prev": "Previous",
+			"slash": "/",
+			"next": "Next image",
+			"number_enabled": true,
+			"number_style": "parentheses"
+		},
+		"segments": [
+			{
+				"type": "boolean",
+				"reference": "enabled"
+			},
+			{
+				"type": "label-preface",
+				"reference": "enabled",
+				"text": "Show text nav"
+			},
+			{
+				"type": "input",
+				"depends_on": "enabled",
+				"reference": "prev"
+			},
+			{
+				"text": " "
+			},
+			{
+				"type": "input-single",
+				"depends_on": "enabled",
+				"reference": "slash"
+			},
+			{
+				"text": " "
+			},
+			{
+				"type": "input",
+				"depends_on": "enabled",
+				"reference": "next"
+			},
+			{
+				"text": " "
+			},
+			{
+				"type": "boolean",
+				"depends_on": "enabled",
+				"reference": "number_enabled"
+			},
+			{
+				"type": "label-preface",
+				"reference": "number_enabled",
+				"text": "Show slide #"
+			},
+			{
+				"type": "radio",
+				"id": "style_parentheses",
+				"depends_on": "enabled",
+				"reference": "number_style",
+				"value": "parentheses"
+			},
+			{
+				"type": "label",
+				"input": "style_parentheses",
+				"text": "_(1 of 4)_"
+			},
+			{
+				"type": "radio",
+				"id": "style_bare",
+				"depends_on": "enabled",
+				"reference": "number_style",
+				"value": "bare"
+			},
+			{
+				"type": "label",
+				"input": "style_bare",
+				"text": "_1 of 4_"
+			}
+		]
+	},
+	{
+		"id": "slide_nav_position",
+		"class": "slideshow_options radio",
+		"available": false,
+		"value": "top",
+		"segments": [
+			{
+				"type": "preface",
+				"text": "Text nav position:"
+			},
+			{
+				"type": "radio",
+				"id": "above",
+				"value": "top"
+			},
+			{
+				"type": "label",
+				"input": "above",
+				"text": "Above"
+			},
+			{
+				"type": "radio",
+				"id": "below",
+				"value": "bottom"
+			},
+			{
+				"type": "label",
+				"input": "below",
+				"text": "Below"
+			}
+		]
+	},
+	{
+		"id": "slideshow_thumbnails_header",
+		"class": "slideshow_options text",
+		"available": false,
+		"value": true,
+		"segments": [
+			{
+				"text": "__Slideshow thumbnails__"
+			}
+		]
+	},
+	{
+		"id": "slide_thumbnails",
+		"class": "slideshow_options check radio",
+		"available": false,
+		"value": {
+			"enabled": false,
+			"position": "top"
+		},
+		"segments": [
+			{
+				"type": "boolean",
+				"reference": "enabled"
+			},
+			{
+				"type": "label-preface",
+				"reference": "enabled",
+				"text": "Always show thumbnails"
+			},
+			{
+				"type": "radio",
+				"id": "above",
+				"depends_on": "enabled",
+				"reference": "position",
+				"value": "top"
+			},
+			{
+				"type": "label",
+				"input": "above",
+				"text": "Above"
+			},
+			{
+				"type": "radio",
+				"id": "below",
+				"depends_on": "enabled",
+				"reference": "position",
+				"value": "bottom"
+			},
+			{
+				"type": "label",
+				"input": "below",
+				"text": "Below"
+			}
+		]
+	},
+	{
+		"id": "slide_default_thumbs",
+		"class": "slideshow_options check",
+		"available": false,
+		"value": false,
+		"segments": [
+			{
+				"type": "boolean"
+			},
+			{
+				"type": "label",
+				"text": "Start slideshows in thumbnail view"
+			}
+		]
+	},
+	{
+		"id": "slide_toggle_thumb_link",
+		"class": "slideshow_options check",
+		"available": false,
+		"value": {
+			"enabled": false,
+			"title": "Thumbnails"
+		},
+		"segments": [
+			{
+				"type": "boolean",
+				"reference": "enabled"
+			},
+			{
+				"type": "label-preface",
+				"reference": "enabled",
+				"text": "Show thumbnail link in the text nav:"
+			},
+			{
+				"type": "input",
+				"depends_on": "enabled",
+				"reference": "title"
+			}
+		]
+	},
+	{
+		"id": "mobile_options",
+		"class": "mobile_options text",
+		"available": true,
+		"value": true,
+		"segments": [
+			{
+				"id": "title",
+				"text": "-------__Mobile__"
+			},
+			{
+				"text": "Cargo offers an optimized mobile design that formats your website specifically for iOS or Android devices. <a target='_blank' href='http://support.cargocollective.com/customer/portal/articles/863596-cargo-mobile'>More info and Examples</a>. "
+			}
+		]
+	},
+	{
+		"id": "mobile",
+		"class": "mobile_options check radio",
+		"available": true,
+		"value": {
+			"enabled": false,
+			"design": "light",
+			"exclude_tablets": true
+		},
+		"segments": [
+			{
+				"type": "boolean",
+				"reference": "enabled"
+			},
+			{
+				"type": "label-preface",
+				"reference": "enabled",
+				"text": "Use mobile design"
+			},
+			{
+				"type": "radio",
+				"id": "light",
+				"depends_on": "enabled",
+				"reference": "design",
+				"value": "light"
+			},
+			{
+				"type": "label",
+				"input": "light",
+				"text": "Light"
+			},
+			{
+				"type": "radio",
+				"id": "dark",
+				"depends_on": "enabled",
+				"reference": "design",
+				"value": "dark"
+			},
+			{
+				"type": "label",
+				"id": "designs",
+				"input": "dark",
+				"text": "Dark"
+			},
+			{
+				"type": "boolean",
+				"depends_on": "enabled",
+				"reference": "exclude_tablets"
+			},
+			{
+				"type": "label",
+				"id": "tablets",
+				"reference": "exclude_tablets",
+				"text": "Keep original formatting on tablets"
+			},
+			{
+				"text": "_(i.e. iPad and Nexus 7)_"
+			}
+		]
+	}
+]
