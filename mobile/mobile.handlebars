@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>{{ site.website_title }}</title>
+
+	<meta name="ROBOTS" content="INDEX,FOLLOW">
+	<meta name="description" content="{{ site.meta_description }}">
+	<meta name="keywords" content="{{ site.meta_tags }}">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	{{{ site.meta_head }}}
+
+	<link href="{{ site.favicon_url}}" rel="shortcut icon">
+	<link href="{{ site.rss_url }}" rel="alternate" type="application/rss+xml" title="{{ site.website_title }} feed">
+
+	{{{ cargo_package }}}
+
+	<base href="/">
+</head>
+<body>
+
+	<div class="toolset">
+		<div class="project_arrows">
+			<div class="project_prev link" rel="prev_project">
+				<svg viewBox="0 0 10 10" height="10" width="10" version="1.1">
+					<polygon class="nav_svg" points="10,10 0,5 10,0 "/>
+				</svg>
+				<div class="loadspin">
+					<img src="/_gfx/loadingAnim.gif" height="10" width="10" />
+				</div>
+			</div>
+
+			<div class="project_close link">
+				<svg viewBox="0 0 13 13" height="13" width="13" version="1.1">
+					<rect class="nav_svg" width="5" height="5"/>
+					<rect class="nav_svg" x="8" width="5" height="5"/>
+					<rect class="nav_svg" x="8" y="8" width="5" height="5"/>
+					<rect class="nav_svg" y="8" width="5" height="5"/>
+				</svg>
+				<div class="loadspin">
+					<img src="/_gfx/loadingAnim.gif" height="10" width="10" />
+				</div>
+			</div>
+
+			<div class="project_next link" rel="next_project">
+				<svg viewBox="0 0 10 10" height="10" width="10" version="1.1">
+					<polygon class="nav_svg" points="0,0 10,5 0,10 "/>
+				</svg>
+				<div class="loadspin">
+					<img src="/_gfx/loadingAnim.gif" height="10" width="10" />
+				</div>
+			</div>
+		</div>
+
+		<div class="navigation_toggle link">
+			<svg viewBox="0 0 16 12" height="12" width="16" version="1.1">
+				<rect class="nav_svg" y="0" width="16" height="2"/>
+				<rect class="nav_svg" y="5" width="16" height="2"/>
+				<rect class="nav_svg" y="10" width="16" height="2"/>
+			</svg>
+		</div>
+
+		<div class="top_line"></div>
+		<div class="bottom_line"></div>
+	</div>
+
+	<div class="nav_container" id="nav_container" data-view="Navigation" data-set="Navigation">
+		{{#navigation}}
+		<div class="{{ type }}_link" id="p{{ id }}" {{#if link_url }}href="{{ link_url }}" rel="linkage"{{else}}rel="history" href="{{ url }}"{{/if}}>{{ title_no_html }}</div>
+		{{/navigation}}
+		<div class="following_link">
+			<div class="following_icon">
+				<svg viewBox="0 0 8.24 15" height="15" width="8.24" version="1.1">
+					<polygon class="nav_svg" points="8.24,6.323 4.517,6.323 6.369,0.01 0,8.676 3.719,8.676 1.869,14.99 "/>
+				</svg>
+			</div>
+			Following ({{ site.following_count }})</div>
+		<div class="bottom_line"></div>
+	</div>
+
+	<div class="nav_screen"></div>
+
+	{{#if site.mobile_header_url}}
+	<div class="header_image"{{#if_any site.start_project_id project.id}} style="display: none;"{{/if_any}}>
+		<img src="{{ site.mobile_header_url }}" width="{{ site.mobile_header_width }}" height="{{ site.mobile_header_height }}">
+	</div>
+	{{/if}}
+
+	<div id="content_container">
+		{{#if site.mobile_header_text}}
+		<div class="site_title"{{#if_any site.start_project_id project.id}} style="display: none;"{{/if_any}}>{{{ site.mobile_header_text }}}</div>
+		{{/if}}
+
+		{{#if site.filter}}
+		<div class="view_tag_info">Filter: <b>{{site.filter}}</b>&nbsp;&nbsp;<a href="{{site.direct_link}}" class="view_all">view all</a></div>
+		{{/if}}
+
+		<div id="maincontainer" data-view="ProjectDetail" data-set="Project"{{#unless_any site.start_project_id project.id}} style="display: none;"{{/unless_any}}>
+			<div page_type="project" id="entry_{{ project.id }}" class="entry">
+				<div class="project_title">{{{ project.title }}}</div>
+				<div class="project_content">{{{ project.content_partial_html }}}</div>
+				<directlink link="{{ project.direct_link }}" id="dl_{{ project.id }}"></directlink>
+			</div>
+
+			<div class="project_footer">
+				{{#if project.date}}<span class="date">{{ project.date }}</span>{{/if}}
+				{{#if project.tags}} 
+				<span class="tags">Filed under {{#project.tags}}<a href="{{ filter_link }}">{{ tag }}</a><span class="tag_comma">,</span> {{/project.tags}}</span>
+				{{/if}}
+			</div>
+
+			<div class="project_bottom"><!-- // --></div>
+		</div>
+
+		<div id="thumbnail_container" data-autopaginate="true" data-view="Thumbnail" data-set="Projects"{{#if site.start_project_id}} style="display: none;"{{/if}}>
+			{{#projects}}
+			<div class="project_thumb" id="item_{{ id }}" name="{{ id }}">
+				<div id="pr_contain_item_{{ id }}">
+					<div data-href="{{ url }}" class="project_link nohover" id="p{{ id }}" data-id="{{ id }}" rel="history">
+						<div class="cardimgcrop " id="cardthumb_{{ id }}" name="">
+							<img src="{{ default_thumb_url }}">
+							<img src="/_gfx/loadingAnim.gif" height="10" width="10" class="loadspin" />
+						</div>
+						<div class="thumb_title ">
+							<span class="text">{{ title_no_html }}</span>
+						</div>
+					</div>
+					{{#if tags}}
+					<div class="thumb_tag">
+						{{#tags}}
+						<a href="{{ filter_link }}">{{ tag }}</a><span class="tag_comma">,</span>
+						{{/tags}}
+					</div>
+					{{/if}}
+				</div>
+			</div>
+			{{/projects}}
+		</div>
+
+		<div id="autopaginate_loader" class="moreload" data-view="Autopaginate" data-preload_distance="250">
+			<img src="/_gfx/loadingAnim.gif">
+		</div>
+	</div>
+
+	<!-- Lightbox -->
+	<fullscreen_option data="lightbox"></fullscreen_option>
+	<script type="text/html" id="fullscreen_src"><div id="fullscreen_imgs"></div></script>
+
+</body>
+</html>

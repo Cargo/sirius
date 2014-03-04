@@ -146,6 +146,20 @@
 		]
 	},
 	{
+		"id": "disable_project_scroll",
+		"available": false,
+		"value": true,
+		"segments": [
+			{
+				"type": "boolean"
+			},
+			{
+				"type": "label",
+				"text": "Disable __Project__ scroll to top"
+			}
+		]
+	},
+	{
 		"id": "view_count_in_project",
 		"class": "main_options check",
 		"available": true,
@@ -777,7 +791,6 @@
 		"available": true,
 		"value": {
 			"enabled": false,
-			"design": "light",
 			"exclude_tablets": true
 		},
 		"segments": [
@@ -786,34 +799,10 @@
 				"reference": "enabled"
 			},
 			{
-				"type": "label-preface",
-				"reference": "enabled",
-				"text": "Use mobile design"
-			},
-			{
-				"type": "radio",
-				"id": "light",
-				"depends_on": "enabled",
-				"reference": "design",
-				"value": "light"
-			},
-			{
-				"type": "label",
-				"input": "light",
-				"text": "Light"
-			},
-			{
-				"type": "radio",
-				"id": "dark",
-				"depends_on": "enabled",
-				"reference": "design",
-				"value": "dark"
-			},
-			{
 				"type": "label",
 				"id": "designs",
-				"input": "dark",
-				"text": "Dark"
+				"reference": "enabled",
+				"text": "Use mobile design"
 			},
 			{
 				"type": "boolean",

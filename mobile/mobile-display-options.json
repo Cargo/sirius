@@ -1,0 +1,35 @@
+[
+	{
+		"id": "thumb_size",
+		"available": true,
+		"value": {
+			"w": 200,
+			"h": 134
+		}
+	},
+	{
+		"id": "image_width",
+		"available": true,
+		"value": 670
+	},
+	{
+		"id": "thumbs_below_projects",
+		"available": true,
+		"value": false
+	},
+	{
+		"id": "pages_in_text_nav",
+		"available": true,
+		"value": true
+	},
+	{
+		"id": "following_link_in_nav",
+		"available": true,
+		"value": true
+	},
+	{
+		"id": "pagination_count",
+		"available": true,
+		"value": 10
+	}
+]

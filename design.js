@@ -165,6 +165,9 @@ Design.project = {
 		}, 1);
 
 		Design.keybindings();
+
+		// Do not scroll to top on index show
+		Cargo.Model.DisplayOptions.attributes.disable_project_scroll = true;
 	},
 
 	resizeSlideshow: function(el, obj, state) {
@@ -307,6 +310,8 @@ Design.page = {
 		$("body").attr("data-view", "page");
 		Design.swipebar.off();
 
+		$("body").scrollTop(0);
+
 		// Resize slideshows
 		setTimeout(function() {
 			Cargo.Plugins.elementResizer.refresh();
@@ -343,6 +348,10 @@ Design.solo = {
 	setTimeout(function() {
 		Design.init();
 	}, 10);
+
+	setTimeout(function() {
+		Cargo.View.Navigation.AddSetActive();
+	}, 300);
 })();
 
 Cargo.Event.on("element_resizer_init", function(plugin) {
@@ -411,6 +420,7 @@ Cargo.Event.on("slideshow_transition_start", function(el, obj) {
 	Design.project.resizeSlideshow(el, obj);
 });
 
-Cargo.Event.on("freshbox_stop", function() {
-	Design.keybindings();
+Cargo.Event.on("fullscreen_destroy_hotkeys", function() {
+    Design.keybindings();
 });
+
