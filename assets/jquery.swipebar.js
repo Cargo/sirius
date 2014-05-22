@@ -763,6 +763,8 @@ var scroll =
                 // Start
                 _swipebar.gotoBlock(0);
 
+                $(window).on('webkitfullscreenchange mozfullscreenchange fullscreenchange', _swipebar.resize);
+
             },
 
             off : function() {
