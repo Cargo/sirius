@@ -372,10 +372,14 @@ Cargo.Event.on("project_load_complete", function(pid) {
 		// Projects and pages
 		if (Cargo.Helper.GetCurrentPageType() == "project") {
 			Design.project.init();
-			Cargo.Plugins.elementResizer.options.forceMargin = slideMargin;
+			Cargo.Plugins.elementResizer.setOptions({
+				forceMargin: slideMargin
+			});
 		} else {
 			Design.page.init();
-			Cargo.Plugins.elementResizer.options.forceMargin = 0;
+			Cargo.Plugins.elementResizer.setOptions({
+				forceMargin: 0
+			});
 		}
 		// Both
 		Design.mobileIcons();
