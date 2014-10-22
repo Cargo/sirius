@@ -18,6 +18,11 @@ body {
 	padding-top: 44px;
 }
 
+/* Password holding screen */
+body.password_protected {
+	background: #999 !important;
+}
+
 /**
  * Toolset
  */
@@ -265,6 +270,12 @@ br {
 	display: block;
 	color: #000;
 	padding: 14px;
+	text-decoration: none;
+}
+
+.nav_container div.no_style {
+	border-top: none;
+	padding: 0;
 	text-decoration: none;
 }
 
@@ -713,6 +724,10 @@ a.freshbox_nav_button.disabled .nav_svg {
 
 #freshbox.ios .freshbox_navigation {
 	bottom: 20px;
+}
+
+#fullscreen_imgs {
+	display: none;
 }
 
 /*
